@@ -1,45 +1,15 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
-  "$id": "http://example.com/example.json",
+  "title": "getSingleUser",
   "type": "object",
-  "title": "The root schema",
-  "description": "The root schema comprises the entire JSON document.",
-  "default": {},
-  "examples": [
-    {
-      "data": {
-        "id": 2,
-        "email": "janet.weaver@reqres.in",
-        "first_name": "Janet",
-        "last_name": "Weaver",
-        "avatar": "https://reqres.in/img/faces/2-image.jpg"
-      },
-      "support": {
-        "url": "https://reqres.in/#support-heading",
-        "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
-      }
-    }
-  ],
   "required": [
     "data",
     "support"
   ],
   "properties": {
     "data": {
-      "$id": "#/properties/data",
+      "$id": "#root/data",
+      "title": "Data",
       "type": "object",
-      "title": "The data schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": {},
-      "examples": [
-        {
-          "id": 2,
-          "email": "janet.weaver@reqres.in",
-          "first_name": "Janet",
-          "last_name": "Weaver",
-          "avatar": "https://reqres.in/img/faces/2-image.jpg"
-        }
-      ],
       "required": [
         "id",
         "email",
@@ -49,98 +19,67 @@
       ],
       "properties": {
         "id": {
-          "$id": "#/properties/data/properties/id",
+          "$id": "#root/data/id",
+          "title": "Id",
           "type": "integer",
-          "title": "The id schema",
-          "description": "An explanation about the purpose of this instance.",
-          "default": 0,
-          "examples": [
-            2
-          ]
+          "default": 0
         },
         "email": {
-          "$id": "#/properties/data/properties/email",
+          "$id": "#root/data/email",
+          "title": "Email",
           "type": "string",
-          "title": "The email schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": "",
-          "examples": [
-            "janet.weaver@reqres.in"
-          ]
+          "pattern": "^.*$"
         },
         "first_name": {
-          "$id": "#/properties/data/properties/first_name",
+          "$id": "#root/data/first_name",
+          "title": "First_name",
           "type": "string",
-          "title": "The first_name schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": "",
-          "examples": [
-            "Janet"
-          ]
+          "pattern": "^.*$"
         },
         "last_name": {
-          "$id": "#/properties/data/properties/last_name",
+          "$id": "#root/data/last_name",
+          "title": "Last_name",
           "type": "string",
-          "title": "The last_name schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": "",
-          "examples": [
-            "Weaver"
-          ]
+          "pattern": "^.*$"
         },
         "avatar": {
-          "$id": "#/properties/data/properties/avatar",
+          "$id": "#root/data/avatar",
+          "title": "Avatar",
           "type": "string",
-          "title": "The avatar schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": "",
-          "examples": [
-            "https://reqres.in/img/faces/2-image.jpg"
-          ]
+          "pattern": "^.*$"
         }
-      },
-      "additionalProperties": true
-    },
+      }
+    }
+  ,
     "support": {
-      "$id": "#/properties/support",
+      "$id": "#root/support",
+      "title": "Support",
       "type": "object",
-      "title": "The support schema",
-      "description": "An explanation about the purpose of this instance.",
-      "default": {},
-      "examples": [
-        {
-          "url": "https://reqres.in/#support-heading",
-          "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
-        }
-      ],
       "required": [
         "url",
         "text"
       ],
       "properties": {
         "url": {
-          "$id": "#/properties/support/properties/url",
+          "$id": "#root/support/url",
+          "title": "Url",
           "type": "string",
-          "title": "The url schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": "",
-          "examples": [
-            "https://reqres.in/#support-heading"
-          ]
+          "pattern": "^.*$"
         },
         "text": {
-          "$id": "#/properties/support/properties/text",
+          "$id": "#root/support/text",
+          "title": "Text",
           "type": "string",
-          "title": "The text schema",
-          "description": "An explanation about the purpose of this instance.",
           "default": "",
-          "examples": [
-            "To keep ReqRes free, contributions towards server costs are appreciated!"
-          ]
+          "pattern": "^.*$"
         }
-      },
-      "additionalProperties": true
+      }
     }
-  },
-  "additionalProperties": true
+
+  }
 }

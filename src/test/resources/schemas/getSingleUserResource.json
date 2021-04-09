@@ -1,8 +1,5 @@
 {
-	"definitions": {},
-	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$id": "https://example.com/object1617947565.json",
-	"title": "Root",
+	"title": "GetSingleUserResource",
 	"type": "object",
 	"required": [
 		"data",
