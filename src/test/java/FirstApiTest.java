@@ -17,7 +17,6 @@ public class FirstApiTest {
         File jsonSchema = new File("src/test/resources/schemas/getSingleUserResource.json");
         response.then().statusCode(200).assertThat().body(matchesJsonSchema(jsonSchema));
         System.out.println("getSingleUserResourceTest Status Code is: " + response.statusCode());
-        System.out.println(" 123 ");
     }
 
     @Test
